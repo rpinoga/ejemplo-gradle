@@ -1,5 +1,7 @@
 node {
 	
+	checkout scm
+	
 	stage('build'){
 		bat 'dir'
 		bat 'gradle clean build -x test'
@@ -10,7 +12,9 @@ node {
 	}
 
 	stage('sonar'){
-		 
+        withSonarQubeEnv(installationName: 'sonar') {
+            sh 'gradle sonarqube'
+        }
 	}
 
 	stage('run'){
