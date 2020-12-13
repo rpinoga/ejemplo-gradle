@@ -12,9 +12,9 @@ node {
 	}
 
 	stage('sonar'){
-        withSonarQubeEnv(installationName: 'sonar') {
-            sh 'gradle sonarqube'
-        }
+        	withSonarQubeEnv(installationName: 'sonar') {
+            		sh 'gradle sonarqube'
+        	}
 	}
 
 	stage('run'){
@@ -31,3 +31,4 @@ node {
 
 
 }
+
