@@ -1,11 +1,12 @@
 node {
 	
 	stage('build'){
-		sh './gradle clean build -x test'
+		bat 'dir'
+		bat 'gradle clean build -x test'
 	}
 
 	stage('test'){
-		sh './gradle clean test -x build'
+		bat 'gradle clean test -x build'
 	}
 
 	stage('sonar'){
