@@ -3,7 +3,7 @@ node {
 	checkout scm
 	
 	stage('build & test'){
-		sh 'gradlew clean build'
+		sh './gradlew clean build'
 	}
 
 	stage('sonar'){
