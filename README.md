@@ -2,9 +2,11 @@
 
 ### Build Code
 * ./gradlew clean build
+# gradle build
 
 ### Run Jar
 * Local:      ./gradlew bootRun 
+# gradle bootRun
 * Pipeline:   nohup bash gradlew bootRun &
 
 ### Testing Application
